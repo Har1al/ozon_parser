@@ -53,7 +53,7 @@ def get_products_links(item_name='macbook air m3'):
 
     for i in product_urls:
         data = collect_product_info(driver=driver, url=i)
-        print(f'[+] собрал дынне товара с id: {data['product_id']}')
+        print(f'[+] Собрал данные товара с id: {data['product_id']}')
         time.sleep(2)
         products_data.append(data)
 
