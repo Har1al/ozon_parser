@@ -32,8 +32,8 @@ def get_products_links(item_name='macbook air m3'):
     #     time.sleep(1)
 
     try:
-        find_links = driver.find_elements(By.CSS_SELECTOR, 'a.q4b1_3_0-a.tile-clickable-element.i1t_24')
-        product_urls = list(set([f'{link.get_attribute('href')}' for link in find_links][:5]))
+        find_links = driver.find_elements(By.CLASS_NAME, 'tile-clickable-element')
+        product_urls = list(set([f'{link.get_attribute('href')}' for link in find_links]))[:5]
 
         print('[+] Ссылки на товары успешно собраны!')
     except:
